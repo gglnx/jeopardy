@@ -1,0 +1,117 @@
+{
+  "id": "round1",
+  "title": "Round 1",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Test 1": [
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      }
+    ],
+    "Test 2": [
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      }
+    ],
+    "Test 3": [
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      }
+    ],
+    "Test 4": [
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      }
+    ],
+    "Test 5": [
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      },
+      {
+        "question": "Was ist Test?",
+        "answer": "Test Test"
+      }
+    ]
+  }
+}
