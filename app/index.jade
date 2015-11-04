@@ -41,7 +41,7 @@ html
 
 			.modal-body
 				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name")
-				p {currentQuestion.answer}
+				p(rv-html="currentQuestion.answer")
 
 			.modal-footer
 				button.btn.btn-danger.pull-left(type="button", rv-on-click="wrongAnswer", rv-enabled="currentPlayer") Wrong

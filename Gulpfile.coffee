@@ -38,4 +38,4 @@ gulp.task 'default', ['jade', 'coffee', 'less'], ->
 	gulp.watch 'app/stylesheets/*.less', ['less']
 
 	browserSync.init server:
-		baseDir: ['app', '.tmp', 'node_modules']
+		baseDir: ['app', '.tmp', 'node_modules', 'gamedata']
