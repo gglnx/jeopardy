@@ -43,9 +43,10 @@ html
 				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name")
 				p(rv-html="currentQuestion.answer")
 
-			.modal-footer
+			.modal-footer: .text-center
 				button.btn.btn-danger.pull-left(type="button", rv-on-click="wrongAnswer", rv-enabled="currentPlayer") Wrong
-				button.btn.btn-success(type="button", rv-on-click="correctAnswer", rv-enabled="currentPlayer") Correct
+				button.btn(type="button", rv-on-click="noAnswer") No answer
+				button.btn.btn-success.pull-right(type="button", rv-on-click="correctAnswer", rv-enabled="currentPlayer") Correct
 
 		//- User selection
 		#playerOptions.modal.fade: .modal-dialog: .modal-content: form.form-horizontal(onsubmit="return false")
