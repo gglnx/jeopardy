@@ -24,7 +24,7 @@ html
 				tbody
 					tr(rv-each-value="board.values")
 						td(rv-each-category="categories")
-							button.btn.btn-block.btn-lg(type="button", rv-on-click="showQuestion", rv-disabled="questionStatus") {value}
+							button.btn.btn-block.btn-lg(type="button", rv-on-click="showQuestion", rv-disabled="questionStatus", rv-style-background-color="questionColor") {value}
 
 		//- Players
 		#players.container-fluid

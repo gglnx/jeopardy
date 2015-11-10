@@ -167,6 +167,15 @@ class GameController
 		question = @board.categories[@category][questionIndex]
 		question.answered
 
+	questionColor: ->
+		questionIndex = @board.values.indexOf parseInt(@value)
+		question = @board.categories[@category][questionIndex]
+
+		if question.answered and question.answeredBy?
+			return question.answeredBy.color
+		else
+			return 'transparent'
+
 	showQuestion: (event, data)=>
 		# Set game state
 		@state = 'gaming:openQuestion'
@@ -227,6 +236,8 @@ class GameController
 
 		@currentPlayer.value += @currentQuestion.value
 		@currentQuestion.answered = true
+		@currentQuestion.answeredBy = @currentPlayer
+		$(@currentQuestion.button).css 'background-color', @currentPlayer.color
 		@closeQuestion()
 
 	wrongAnswer: =>
