@@ -9,17 +9,34 @@ class GameController
 		@currentPlayer = null
 		@boardOpenForPlayers = false
 
-		# Load state
-		@loadState()
-
 		# Save state every secound
 		@saveStateInternal = setInterval =>
 			@lastUpdate = Date.now()
 			@saveState()
 		, 250
 
+		# Sounds
+		soundList =
+			dailydouble: url: '/sounds/dailydouble.mp3', volume: 100
+			buzzer: url: '/sounds/buzzer.mp3', volume: 100
+			waiting: url: '/sounds/waiting.mp3', volume: 25
+
+		# Init soundManager
+		soundManager.setup
+			url: '/soundmanager2/swf/'
+			preferFlash: false
+			onready: =>
+				for key, value of soundList
+					soundManager.createSound id: key, url: value.url, volume: value.volume
+
+				@loadState()
+
 	saveState: =>
-		localStorage.setItem @board.id, JSON.stringify @
+		state = JSON.stringify @, (key, value)->
+			return undefined if key in ['sound', '_s', '_a']
+			return value
+
+		localStorage.setItem @board.id, state
 
 	loadState: =>
 		# Load old state
@@ -80,6 +97,8 @@ class GameController
 			player.isCurrentPlayer = true
 			@currentPlayer = player
 			@enableOrDisablePlayerInput()
+			soundManager.play 'buzzer'
+			soundManager.play 'waiting'
 
 	startGame: (event)=>
 		# Prevent submitting
@@ -154,6 +173,7 @@ class GameController
 			player.keyWorking = true
 			@lastUpdate = Date.now()
 			Mousetrap.unbind "shift+#{player.key}"
+			soundManager.play 'buzzer'
 
 	deletePlayer: (event, data)=>
 		@players.splice data.index, 1
@@ -187,15 +207,24 @@ class GameController
 		@currentQuestion.value = data.value
 		@currentQuestion.button = event.target
 
+		# Stop sound
+		$('#question').on 'hidden.bs.modal', -> soundManager.stop 'waiting'
+
 		# Is current question a daily double?
 		if @currentQuestion.daily
+			# Play daily double sound
+			soundManager.play 'dailydouble'
+
+			# Setup dailydouble values
 			@dailydoubleMin = 100
 			@dailydoubleMax = Math.max @currentPlayer.value, Math.max.apply(null, @board.values)
 			@dailydouble = @dailydoubleMin
 
 			# Show daily double modal
 			$('#dailydouble').modal 'show'
-			$('#dailydouble').on 'hidden.bs.modal', -> $('#question').modal 'show'
+			$('#dailydouble').on 'hidden.bs.modal', ->
+				$('#question').modal 'show'
+				soundManager.play 'waiting'
 		else
 			# Deselect current player
 			@currentPlayer.isCurrentPlayer = false if @currentPlayer

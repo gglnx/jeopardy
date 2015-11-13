@@ -19,6 +19,7 @@
     "jquery": "^2.1.4",
     "mousetrap": "^1.5.3",
     "randomcolor": "^0.4.0",
-    "rivets": "^0.8.1"
+    "rivets": "^0.8.1",
+    "soundmanager2": "^2.97.20150601-a"
   }
 }
