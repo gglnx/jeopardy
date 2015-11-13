@@ -40,13 +40,27 @@ html
 				h4.modal-title {currentQuestion.category}
 
 			.modal-body
-				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name")
+				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name", rv-if="currentPlayer")
 				p(rv-html="currentQuestion.answer")
 
 			.modal-footer: .text-center
 				button.btn.btn-danger.pull-left(type="button", rv-on-click="wrongAnswer", rv-enabled="currentPlayer") Wrong
 				button.btn(type="button", rv-on-click="noAnswer") No answer
 				button.btn.btn-success.pull-right(type="button", rv-on-click="correctAnswer", rv-enabled="currentPlayer") Correct
+
+		//- Daily double modal
+		#dailydouble.modal.fade: .modal-dialog: .modal-content
+			.modal-header
+				button.close(type="button", data-dismiss="modal", aria-label="Close", rv-on-click="leaveQuestion"): span(aria-hidden="true") &times;
+				h4.modal-title Daily double!
+
+			.modal-body
+				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name")
+				.form-group
+					input.form-control.input-lg(type="number", step="10", rv-min="dailydoubleMin", rv-max="dailydoubleMax", rv-value="dailydouble")
+
+			.modal-footer: .text-center
+				button.btn.btn-success.pull-right(type="button", rv-on-click="dailydoubleSelected") Go
 
 		//- User selection
 		#playerOptions.modal.fade: .modal-dialog: .modal-content: form.form-horizontal(onsubmit="return false")

@@ -180,13 +180,6 @@ class GameController
 		# Set game state
 		@state = 'gaming:openQuestion'
 
-		# Deselect current player
-		@currentPlayer.isCurrentPlayer = false if @currentPlayer
-		@currentPlayer = null
-
-		# Update buttons
-		@lastUpdate = Date.now()
-
 		# Select question
 		questionIndex = @board.values.indexOf parseInt(data.value)
 		@currentQuestion = @board.categories[data.category][questionIndex]
@@ -194,8 +187,25 @@ class GameController
 		@currentQuestion.value = data.value
 		@currentQuestion.button = event.target
 
-		# Show question modal
-		$('#question').modal 'show'
+		# Is current question a daily double?
+		if @currentQuestion.daily
+			@dailydoubleMin = 100
+			@dailydoubleMax = Math.max @currentPlayer.value, Math.max.apply(null, @board.values)
+			@dailydouble = @dailydoubleMin
+
+			# Show daily double modal
+			$('#dailydouble').modal 'show'
+			$('#dailydouble').on 'hidden.bs.modal', -> $('#question').modal 'show'
+		else
+			# Deselect current player
+			@currentPlayer.isCurrentPlayer = false if @currentPlayer
+			@currentPlayer = null
+
+			# Show question modal
+			$('#question').modal 'show'
+
+		# Update buttons
+		@lastUpdate = Date.now()
 
 		# Key bindings
 		Mousetrap.bind 'w', => @wrongAnswer()
@@ -205,6 +215,9 @@ class GameController
 
 		# Disable button
 		$(event.target).attr 'disabled', true
+
+	dailydoubleSelected: =>
+		$('#dailydouble').modal 'hide'
 
 	closeQuestion: =>
 		# Set game state
@@ -234,7 +247,11 @@ class GameController
 	correctAnswer: =>
 		return if @currentPlayer is null
 
-		@currentPlayer.value += @currentQuestion.value
+		if @currentQuestion.daily
+			@currentPlayer.value += parseInt @dailydouble
+		else
+			@currentPlayer.value += @currentQuestion.value
+
 		@currentQuestion.answered = true
 		@currentQuestion.answeredBy = @currentPlayer
 		$(@currentQuestion.button).css 'background-color', @currentPlayer.color
