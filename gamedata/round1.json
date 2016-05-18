@@ -1,117 +1,98 @@
 {
   "id": "round1",
-  "title": "Round 1",
+  "title": "Runde 1",
   "values": [100, 200, 300, 400, 500],
   "categories": {
-    "Test 1": [
+    "damals(TM)": [
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test",
+        "answer": "<img src='round1/ipod-first-gen-5gb-accessories.jpeg' />"
+      },
+      {
+        "answer": "<img src='round1/schlaflos-in-muenchen.png' />"
+      },
+      {
+        "answer": "Podcast"
+      },
+      {
+        "answer": "Adam Curry"
+      },
+      {
+        "answer": "Ich bin der Sender!"
+      }
+    ],
+    "#ppw": [
+      {
+        "answer": "04./05.05.2013"
+      },
+      {
+        "answer": "<img src='round1/coup-map.png' />"
+      },
+      {
+        "answer": "01. Mai 2016, 17:00 Uhr",
         "daily": true
       },
       {
-        "question": "Was ist Test?",
-        "answer": "<img src='round1/test.png' />"
+        "answer": "<img src='round1/stuehle.jpg' />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Maneki-neko"
       }
     ],
-    "Test 2": [
+    "Vader": [
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "audio": true,
+        "answer": "<audio src='round1/vader/1.wav' controls autoplay />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "audio": true,
+        "answer": "<audio src='round1/vader/2.wav' controls autoplay />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "audio": true,
+        "answer": "<audio src='round1/vader/3.wav' controls autoplay />",
+        "daily": true
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "audio": true,
+        "answer": "<audio src='round1/vader/4.wav' controls autoplay />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "audio": true,
+        "answer": "<audio src='round1/vader/5.wav' controls autoplay />"
       }
     ],
-    "Test 3": [
+    "In 100 Metern rechts abbiegen": [
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "<img src='round1/N-1.png' />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "<img src='round1/DOUBLEENDER.png' />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "<img src='round1/raeuspertasten.jpg' />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "<img src='round1/Funkstrecke.png' />"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "<img src='round1/Rudelpodcast.png' />"
       }
     ],
-    "Test 4": [
+    "RflEttÜAÜG": [
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Trainerwechsel"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Polen: Politik als neoliberaler Feuerwehrmann"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Was ist ein Internet?"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Anaxagoras – Sonne, Mond und Sterne"
       },
       {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      }
-    ],
-    "Test 5": [
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
-      },
-      {
-        "question": "Was ist Test?",
-        "answer": "Test Test"
+        "answer": "Rosys grüne Wolle"
       }
     ]
   }

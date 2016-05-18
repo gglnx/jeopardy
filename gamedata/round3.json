@@ -1,0 +1,102 @@
+{
+  "id": "round3",
+  "title": "Runde 3",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Tüdelü": [
+      {
+        "audio": true,
+        "answer": "<audio src='round3/intro/1.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round3/intro/2.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round3/intro/3.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round3/intro/4.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round3/intro/5.wav' controls autoplay />"
+      }
+    ],
+    "In Serie": [
+      {
+        "answer": "Sarah Koenig"
+      },
+      {
+        "answer": "Leakin Park"
+      },
+      {
+        "answer": "Asia McClain"
+      },
+      {
+        "answer": "MailChimp"
+      },
+      {
+        "answer": "Sgt. Bowe Bergdahl"
+      }
+    ],
+    "Wer bin ich?": [
+      {
+        "answer": "Brecht"
+      },
+      {
+        "answer": "Brecht"
+      },
+      {
+        "answer": "Enzensberger"
+      },
+      {
+        "answer": "Brecht"
+      },
+      {
+        "answer": "Brecht"
+      }
+    ],
+    "Wellenreiter": [
+      {
+        "answer": "<img src='round3/Clipping.png' />"
+      },
+      {
+        "answer": "<img src='round3/Digital0.png' />"
+      },
+      {
+        "answer": "<img src='round3/USBClick.png' />"
+      },
+      {
+        "answer": "<img src='round3/Auphonic.png' />"
+      },
+      {
+        "answer": "<img src='round3/Crossfade.png' />"
+      }
+    ],
+    "Clusterfuck": [
+      {
+        "answer": "<img src='round3/kabelsalat.png' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='round3/matrix.png' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='round3/sendezentrum.jpg' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='round3/berlin.jpg' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='round3/goettingen.png' />",
+        "daily": true
+      }
+    ]
+  }
+}

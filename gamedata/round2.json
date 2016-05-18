@@ -1,0 +1,99 @@
+{
+  "id": "round2",
+  "title": "Runde 2",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Fasse Dich kurz": [
+      {
+        "answer": "RSS"
+      },
+      {
+        "answer": "FLAC"
+      },
+      {
+        "answer": "OSF"
+      },
+      {
+        "answer": "PSC"
+      },
+      {
+        "answer": "PHP"
+      }
+    ],
+    "LOL": [
+      {
+        "audio": true,
+        "answer": "<audio src='round2/lol/1.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round2/lol/2.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round2/lol/3.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round2/lol/4.wav' controls autoplay />"
+      },
+      {
+        "audio": true,
+        "answer": "<audio src='round2/lol/5.wav' controls autoplay />"
+      }
+    ],
+    "Versteckt": [
+      {
+        "answer": "<img src='round2/versteckt/1.jpg' />"
+      },
+      {
+        "answer": "<img src='round2/versteckt/2.jpg' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='round2/versteckt/3.jpg' />"
+      },
+      {
+        "answer": "<img src='round2/versteckt/4.jpg' />"
+      },
+      {
+        "answer": "<img src='round2/versteckt/5.jpg' />"
+      }
+    ],
+    "Sendegatezentrum": [
+      {
+        "answer": "737"
+      },
+      {
+        "answer": "<img src='round2/sondersendung.jpg' />"
+      },
+      {
+        "answer": "podcaste.jetzt"
+      },
+      {
+        "answer": "<img src='round2/teppich.png' />"
+      },
+      {
+        "answer": "373"
+      }
+    ],
+    "💩": [
+      {
+        "answer": "<img src='round2/angegraben.jpg' height='80' />"
+      },
+      {
+        "answer": "🐴➕🐻"
+      },
+      {
+        "answer": "🔬👻"
+      },
+      {
+        "answer": "💇💅👒👍➕📐📐📐",
+        "daily": true
+      },
+      {
+        "answer": "👩👨➡️👶➡️🙊😱 🙀➡️👩💀👨👹🙏"
+      }
+    ]
+  }
+}
