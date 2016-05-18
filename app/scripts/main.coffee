@@ -15,6 +15,9 @@ class GameController
 			@saveState()
 		, 250
 
+		# Load state
+		@loadState()
+
 		# Sounds
 		soundList =
 			dailydouble: url: '/sounds/dailydouble.mp3', volume: 100
@@ -29,7 +32,8 @@ class GameController
 				for key, value of soundList
 					soundManager.createSound id: key, url: value.url, volume: value.volume
 
-				@loadState()
+		# Full screen
+		Mousetrap.bind 'f', -> $('body').get(0).mozRequestFullScreen()
 
 	saveState: =>
 		state = JSON.stringify @, (key, value)->
@@ -43,6 +47,9 @@ class GameController
 		oldState = JSON.parse localStorage.getItem(@board.id)
 		for key, value of oldState
 			@[key] = value
+
+		# Current player
+		@players.forEach (player)=> @currentPlayer = player if player.isCurrentPlayer
 
 		# Init game with player options
 		if @state is 'playerOptions'
@@ -69,6 +76,12 @@ class GameController
 	categories: =>
 		Object.keys @board.categories
 
+	categoriesColumnWidth: =>
+		( 100 / @categories().length ) + "%"
+
+	playersColumnsWidth: =>
+		( 100 / @players.length ) + "%"
+
 	enableOrDisablePlayerInput: (boardOpenForPlayers = !@boardOpenForPlayers)=>
 		@boardOpenForPlayers = boardOpenForPlayers
 
@@ -94,11 +107,12 @@ class GameController
 		if @currentPlayer isnt null
 			return false unless @currentPlayer is player
 		else
-			player.isCurrentPlayer = true
+			@players.forEach (element)-> element.isCurrentPlayer = false
+			@currentPlayer = null
 			@currentPlayer = player
+			@currentPlayer.isCurrentPlayer = true
 			@enableOrDisablePlayerInput()
 			soundManager.play 'buzzer'
-			soundManager.play 'waiting'
 
 	startGame: (event)=>
 		# Prevent submitting
@@ -122,8 +136,11 @@ class GameController
 				j = Math.floor( Math.random() * ( i + 1 ) )
 				[players[i], players[j]] = [players[j], players[i]]
 
+			# Remove currentPlayer
+			@players.forEach (element)-> element.isCurrentPlayer = false
+
 			# See: https://github.com/mikeric/rivets/issues/452
-			@currentPlayer.isCurrentPlayer = false if @currentPlayer
+			@currentPlayer = null
 			@currentPlayer = players[0]
 			@currentPlayer.isCurrentPlayer = true
 
@@ -133,20 +150,19 @@ class GameController
 			@currentPlayer = null
 
 		# Show final screen
-		Mousetrap.bind 'f', =>
+		Mousetrap.bind 's', =>
 			@showFinalScreen() unless @currentQuestion
-
-		# Restart game
-		Mousetrap.bind 'shift+esc', =>
-			clearInterval @saveStateInternal
-			localStorage.removeItem @board.id
-			window.location.reload()
 
 		# Listen for player buzzers
 		keys = []
 		for player in @players
 			keys.push "shift+#{player.key}"
 		Mousetrap.bind keys, @playerBuzzes
+
+	restart: =>
+		clearInterval @saveStateInternal
+		localStorage.removeItem @board.id
+		window.location.reload()
 
 	addPlayer: =>
 		# New player key
@@ -208,7 +224,11 @@ class GameController
 		@currentQuestion.button = event.target
 
 		# Stop sound
-		$('#question').on 'hidden.bs.modal', -> soundManager.stop 'waiting'
+		$('#question').on 'shown.bs.modal', =>
+			soundManager.stop 'waiting'
+			soundManager.play 'waiting' unless @currentQuestion.audio
+		$('#question').on 'hidden.bs.modal', ->
+			soundManager.stop 'waiting'
 
 		# Is current question a daily double?
 		if @currentQuestion.daily
@@ -222,12 +242,13 @@ class GameController
 
 			# Show daily double modal
 			$('#dailydouble').modal 'show'
-			$('#dailydouble').on 'hidden.bs.modal', ->
-				$('#question').modal 'show'
-				soundManager.play 'waiting'
+			$('#dailydouble').on 'hidden.bs.modal', -> $('#question').modal 'show'
 		else
+			# Open board for players
+			@enableOrDisablePlayerInput true
+
 			# Deselect current player
-			@currentPlayer.isCurrentPlayer = false if @currentPlayer
+			@players.forEach (element)-> element.isCurrentPlayer = false
 			@currentPlayer = null
 
 			# Show question modal
@@ -261,6 +282,9 @@ class GameController
 		# Remove current question
 		@currentQuestion = null
 
+		# Disable input
+		@enableOrDisablePlayerInput false
+
 		# Update counts
 		if not @openQuestionsLeft()
 			@showFinalScreen()
@@ -290,7 +314,7 @@ class GameController
 		return if @currentPlayer is null
 
 		@currentPlayer.value -= @currentQuestion.value
-		@currentPlayer.isCurrentPlayer = false if @currentPlayer
+		@players.forEach (element)-> element.isCurrentPlayer = false
 		@currentPlayer = null
 		@enableOrDisablePlayerInput()
 

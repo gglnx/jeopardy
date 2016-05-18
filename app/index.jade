@@ -19,6 +19,8 @@ html
 		//- Game board
 		#gameBoard.container-fluid
 			table.table
+				colgroup
+					col(rv-each-category="categories", rv-width="categoriesColumnWidth")
 				thead: tr
 					th(rv-each-category="categories") {category}
 				tbody
@@ -28,10 +30,13 @@ html
 
 		//- Players
 		#players.container-fluid
-			table.table: tr
-				td(rv-each-player="players"): .panel.panel-default(rv-class-current-player="player.isCurrentPlayer")
-					.panel-heading(rv-style-background-color="player.color"): h3.panel-title {player.name} ({player.key})
-					.panel-body {player.value}
+			table.table
+				colgroup
+					col(rv-each-player="players", rv-width="playersColumnsWidth < players")
+				tbody: tr
+					td(rv-each-player="players"): .panel.panel-default(rv-class-current-player="player.isCurrentPlayer")
+						.panel-heading(rv-style-background-color="player.color"): h3.panel-title {player.name} ({player.key})
+						.panel-body {player.value}
 
 		//- Question modal
 		#question.modal.fade: .modal-dialog: .modal-content
@@ -40,7 +45,8 @@ html
 				h4.modal-title {currentQuestion.category}
 
 			.modal-body
-				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name", rv-if="currentPlayer")
+				.currentPlayerWrapper(rv-each-player="players")
+					p.currentPlayer(rv-style-background-color="player.color", rv-text="player.name", rv-if="player.isCurrentPlayer")
 				p(rv-html="currentQuestion.answer")
 
 			.modal-footer: .text-center
@@ -55,7 +61,8 @@ html
 				h4.modal-title Daily double!
 
 			.modal-body
-				p.currentPlayer(rv-style-background-color="currentPlayer.color", rv-text="currentPlayer.name")
+				.currentPlayerWrapper(rv-each-player="players")
+					p.currentPlayer(rv-style-background-color="player.color", rv-text="player.name", rv-if="player.isCurrentPlayer")
 				.form-group
 					input.form-control.input-lg(type="number", step="10", rv-min="dailydoubleMin", rv-max="dailydoubleMax", rv-value="dailydouble")
 
