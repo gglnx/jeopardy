@@ -1,0 +1,93 @@
+{
+  "id": "round1",
+  "title": "Runde 1",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Barcamps": [
+      {
+        "answer": "<img src='t3cb1/camps/muenchen.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/camps/stuttgart.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/camps/mallorca.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/camps/rheinruhr.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/camps/venlo.jpg' />"
+      }
+    ],
+    "Failed State": [
+      {
+        "answer": "&raquo;Goldelse&laquo;"
+      },
+      {
+        "answer": "&raquo;Rosinenbomber&laquo;"
+      },
+      {
+        "answer": "365 Meter"
+      },
+      {
+        "answer": "Quadriga"
+      },
+      {
+        "answer": "Sperenberg"
+      }
+    ],
+    "X.Y.Z": [
+      {
+        "answer": "Aktuelle TYPO3 8 LTS Version"
+      },
+      {
+        "answer": "Aktuelle TYPO3 7 LTS Version"
+      },
+      {
+        "answer": "Aktuelle TYPO3 6 LTS Version",
+        "daily": true
+      },
+      {
+        "answer": "Letzte Nicht-ELTS-Version TYPO3 4.5"
+      },
+      {
+        "answer": "Höchste TYPO3-Versionsnummer < 6"
+      }
+    ],
+    "DBA / EDBA": [
+      {
+        "answer": "EXT"
+      },
+      {
+        "answer": "TER"
+      },
+      {
+        "answer": "LTS"
+      },
+      {
+        "answer": "T3X"
+      },
+      {
+        "answer": "TSFE"
+      }
+    ],
+    "Linke Ikonographie": [
+      {
+        "answer": "<img src='t3cb1/icons/info.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/icons/user-settings.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/icons/install.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/icons/task-center.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb1/icons/functions.svg' />"
+      }
+    ]
+  }
+}

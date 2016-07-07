@@ -1,0 +1,93 @@
+{
+  "id": "round3",
+  "title": "Runde 3",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Beyond Tellerrand": [
+      {
+        "answer": "<img src='t3cb3/cms/drupal.png' />"
+      },
+      {
+        "answer": "<img src='t3cb3/cms/joomla.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/cms/contao.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/cms/plone.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/cms/sonata.png' />"
+      }
+    ],
+    "Failed State": [
+      {
+        "answer": "&raquo;Ich bin ein Berliner.&laquo;"
+      },
+      {
+        "answer": "&raquo;Niemand hat die Absicht, eine Mauer zu errichten!&laquo;"
+      },
+      {
+        "answer": "&raquo;Mr. Gorbachev, tear down this wall!&laquo;"
+      },
+      {
+        "answer": "&raquo;Und das ist auch gut so.&laquo;",
+        "daily": true
+      },
+      {
+        "answer": "&raquo;Völker der Welt, schaut auf diese Stadt!&laquo;"
+      }
+    ],
+    "T3-Historie": [
+      {
+        "answer": "<img src='t3cb3/history/logo-old.gif' />"
+      },
+      {
+        "answer": "<img src='t3cb3/history/phoenix.jpg' />"
+      },
+      {
+        "answer": "&raquo;Also hat Gott die Welt geliebt, daß er seinen eingeborenen Sohn gab, auf daß alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben.&laquo;"
+      },
+      {
+        "answer": "<img src='t3cb3/history/loginimage_4_2.jpg' />"
+      },
+      {
+        "answer": "Superfish.com"
+      }
+    ],
+    "DBA / EDBA": [
+      {
+        "answer": "FAL"
+      },
+      {
+        "answer": "TCA"
+      },
+      {
+        "answer": "COA"
+      },
+      {
+        "answer": "T3DD"
+      },
+      {
+        "answer": "T3GA"
+      }
+    ],
+    "Linke Ikonographie": [
+      {
+        "answer": "<img src='t3cb3/icons/recycler.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/icons/lang.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/icons/page.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/icons/extensions.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb3/icons/list.svg' />"
+      }
+    ]
+  }
+}
