@@ -41,7 +41,7 @@ html
 		//- Question modal
 		#question.modal.fade: .modal-dialog: .modal-content
 			.modal-header
-				button.close(type="button", data-dismiss="modal", aria-label="Close", rv-on-click="leaveQuestion"): span(aria-hidden="true") &times;
+				button.close(type="button", data-dismiss="modal", aria-label="Close", rv-on-click="leaveQuestion", rv-disabled="currentQuestion.daily"): span(aria-hidden="true") &times;
 				h4.modal-title {currentQuestion.category}
 
 			.modal-body
@@ -57,7 +57,6 @@ html
 		//- Daily double modal
 		#dailydouble.modal.fade: .modal-dialog: .modal-content
 			.modal-header
-				button.close(type="button", data-dismiss="modal", aria-label="Close", rv-on-click="leaveQuestion"): span(aria-hidden="true") &times;
 				h4.modal-title Daily double!
 
 			.modal-body
