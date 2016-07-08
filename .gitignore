@@ -21,6 +21,7 @@ node_modules/
 .Spotlight-V100
 .Trashes
 Icon?
+!icons
 ehthumbs.db
 Thumbs.db
 
