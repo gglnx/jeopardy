@@ -174,7 +174,7 @@ class GameController
 			name: "Player #{newPlayerKey}"
 			value: 0
 			keyWorking: false
-			color: randomColor luminosity: 'bright'
+			color: randomColor luminosity: 'light'
 			isCurrentPlayer: false
 
 		# Update buttons
