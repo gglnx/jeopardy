@@ -240,7 +240,7 @@ class GameController
 			soundManager.play 'dailydouble'
 
 			# Setup dailydouble values
-			@dailydoubleMin = 100
+			@dailydoubleMin = @currentQuestion.value
 			@dailydoubleMax = Math.max @currentPlayer.value, Math.max.apply(null, @board.values)
 			@dailydouble = @dailydoubleMin
 
