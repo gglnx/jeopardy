@@ -313,7 +313,11 @@ class GameController
 	wrongAnswer: =>
 		return if @currentPlayer is null
 
-		@currentPlayer.value -= @currentQuestion.value
+		if @currentQuestion.daily
+			@currentPlayer.value -= parseInt @dailydouble
+		else
+			@currentPlayer.value -= @currentQuestion.value
+
 		@players.forEach (element)-> element.isCurrentPlayer = false
 		@currentPlayer = null
 		@enableOrDisablePlayerInput()
