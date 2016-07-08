@@ -51,7 +51,7 @@ html
 
 			.modal-footer: .text-center
 				button.btn.btn-danger.pull-left(type="button", rv-on-click="wrongAnswer", rv-enabled="currentPlayer") Wrong
-				button.btn(type="button", rv-on-click="noAnswer") No answer
+				button.btn(type="button", rv-on-click="noAnswer", rv-disabled="currentQuestion.daily") No answer
 				button.btn.btn-success.pull-right(type="button", rv-on-click="correctAnswer", rv-enabled="currentPlayer") Correct
 
 		//- Daily double modal

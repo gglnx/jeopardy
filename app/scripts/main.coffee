@@ -261,7 +261,7 @@ class GameController
 		Mousetrap.bind 'w', => @wrongAnswer()
 		Mousetrap.bind 'c', => @correctAnswer()
 		Mousetrap.bind ['l', 'esc'], => @leaveQuestion()
-		Mousetrap.bind 'n', => @noAnswer()
+		Mousetrap.bind 'n', => @noAnswer() if not @currentQuestion.daily
 
 		# Disable button
 		$(event.target).attr 'disabled', true
@@ -321,6 +321,9 @@ class GameController
 		@players.forEach (element)-> element.isCurrentPlayer = false
 		@currentPlayer = null
 		@enableOrDisablePlayerInput()
+
+		if @currentQuestion.daily
+			@noAnswer()
 
 	showFinalScreen: =>
 		# Show final screen
