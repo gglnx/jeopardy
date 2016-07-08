@@ -1,0 +1,93 @@
+{
+  "id": "round2",
+  "title": "Runde 2",
+  "values": [100, 200, 300, 400, 500],
+  "categories": {
+    "Farben": [
+      {
+        "answer": "#FFFFFF"
+      },
+      {
+        "answer": "#00FF00"
+      },
+      {
+        "answer": "E8E8E8"
+      },
+      {
+        "answer": "#FFFF00"
+      },
+      {
+        "answer": "#FF8700"
+      }
+    ],
+    "Failed State": [
+      {
+        "answer": "&raquo;Weil wir dich lieben&laquo;"
+      },
+      {
+        "answer": "&raquo;Eisern!&laquo;"
+      },
+      {
+        "answer": "Konopke"
+      },
+      {
+        "answer": "&raquo;Erichs Lampenladen&laquo;"
+      },
+      {
+        "answer": "&raquo;Otto Lilienthal&laquo;"
+      }
+    ],
+    "In Bildern": [
+      {
+        "answer": "<img src='t3cb2/in-bildern/viewhelper.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/in-bildern/extensions.jpg' />",
+        "daily": true
+      },
+      {
+        "answer": "<img src='t3cb2/in-bildern/core.jpg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/in-bildern/wrap.png' />"
+      },
+      {
+        "answer": "<img src='t3cb2/in-bildern/button.jpg' />"
+      }
+    ],
+    "DBA / EDBA": [
+      {
+        "answer": "T3CB"
+      },
+      {
+        "answer": "T3D"
+      },
+      {
+        "answer": "TCE"
+      },
+      {
+        "answer": "TUG"
+      },
+      {
+        "answer": "T3A"
+      }
+    ],
+    "Linke Ikonographie": [
+      {
+        "answer": "<img src='t3cb2/icons/backend-users.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/icons/access.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/icons/workspaces.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/icons/db-check.svg' />"
+      },
+      {
+        "answer": "<img src='t3cb2/icons/scheduler.svg' />"
+      }
+    ]
+  }
+}
