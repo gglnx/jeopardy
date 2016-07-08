@@ -213,6 +213,10 @@ class GameController
 			return 'transparent'
 
 	showQuestion: (event, data)=>
+		# A player must be selected first
+		if @currentPlayer is null
+			return false
+
 		# Set game state
 		@state = 'gaming:openQuestion'
 
