@@ -10,6 +10,7 @@ pids
 logs
 npm-debug.log
 node_modules/
+yarn-error.log
 
 # Gulp
 .tmp

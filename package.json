@@ -4,6 +4,9 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "scripts": {
+    "gulp": "gulp"
+  },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "browser-sync": "^2.9.11",
