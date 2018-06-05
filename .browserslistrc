@@ -1,0 +1,12 @@
+# Default browserslist
+# Last updated Feb. 2018
+
+Safari >= 10
+iOS >= 10
+Chrome >= 56
+Android >= 56
+ChromeAndroid >= 56
+Firefox >= 52
+FirefoxAndroid >= 52
+IE 11
+Edge >= 14

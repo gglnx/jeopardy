@@ -1,0 +1,4 @@
+node_modules
+dest
+*.test.js
+**/__mocks__/**/*.js

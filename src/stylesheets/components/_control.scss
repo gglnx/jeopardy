@@ -1,0 +1,20 @@
+.control {
+  align-items: center;
+  background-color: #d32f2f;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  height: 5rem;
+  line-height: 0;
+  padding: 0;
+  width: 5rem;
+}
+
+.control--okay {
+  background-color: #388e3c;
+}
+
+.control--small {
+  height: 2.5rem;
+  width: 2.5rem;
+}

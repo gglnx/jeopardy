@@ -1,0 +1,27 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.game__title {
+  background-color: #efefef;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.game__buzzer-status {
+  line-height: 0;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  z-index: 1000;
+}
+
+.game__board {
+  flex-grow: 1;
+}

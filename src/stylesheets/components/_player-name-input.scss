@@ -1,0 +1,27 @@
+.player-name-input {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 2rem 1rem;
+}
+
+.player-name-input__key,
+.player-name-input__name,
+.player-name-input__buzzer-test {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.player-name-input__key {
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  font-weight: bold;
+  height: 5rem;
+  justify-content: center;
+  width: 5rem;
+}
+
+.player-name-input__name {
+  flex-grow: 1;
+}

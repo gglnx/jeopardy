@@ -1,0 +1,21 @@
+.players-input {
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-top: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.players-input__content {
+  flex-grow: 1;
+}
+
+.players-input__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}

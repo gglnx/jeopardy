@@ -1,0 +1,28 @@
+.daily-double {
+  align-items: center;
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.daily-double__headline {
+  font-size: 15rem;
+  margin: 0;
+  padding-bottom: 5rem;
+}
+
+.daily-double__input {
+  font-size: 10rem;
+  text-align: center;
+}
+
+.daily-double__min-max {
+  color: #999;
+  padding: 3rem;
+}

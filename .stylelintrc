@@ -1,0 +1,21 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss",
+    "@namics/stylelint-bem"
+  ],
+  "rules": {
+    "plugin/stylelint-bem-namics": {
+      "patternPrefixes": [],
+      "helperPrefixes": ["is", "has", "u"]
+    },
+    "selector-class-pattern": false,
+    "max-nesting-depth": [
+      1,
+      {
+        "ignore": ["blockless-at-rules"],
+        "ignoreAtRules": ["media", "each", "if", "include"]
+      }
+    ],
+  }
+}

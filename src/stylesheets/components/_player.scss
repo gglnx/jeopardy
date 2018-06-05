@@ -1,0 +1,19 @@
+.player {
+  border: 10px solid transparent;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.player--current {
+  border: 10px solid #d32f2f;
+}
+
+.player__name {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.player__score {
+  font-size: 6rem;
+  line-height: 4rem;
+}
