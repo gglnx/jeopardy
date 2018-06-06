@@ -7,7 +7,7 @@
   "author": "Dennis Morhardt <info@dennismorhardt.de>",
   "license": "MIT",
   "scripts": {
-    "game": "parcel src/game.pug",
+    "game": "parcel src/game.pug"
   },
   "dependencies": {
     "classnames": "^2.2.5",
