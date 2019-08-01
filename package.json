@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "mousetrap": "^1.6.1",
     "normalize.css": "^8.0.0",
     "randomcolor": "^0.5.3",
